@@ -1,0 +1,8 @@
+<div *ngFor = "let question of arrayQuestions">
+    <!-- Question -->
+     <h2>{{question.question}}</h2>
+    <!-- Button to show the answer-->
+     <button (click) = "question.visible = !question.visible">{{question.visible? "Show": "Save"}}</button>
+    <!-- Text to show the answer -->
+     <p [hidden] = "!question.visible"> {{question.answer}}</p>
+</div>
